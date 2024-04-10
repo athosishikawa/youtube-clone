@@ -1,30 +1,32 @@
-import logo from './logo.svg';
+import React, { useEffect, useRef } from 'react';
 import './App.css';
+import NavBar from './NavBar.js';
+import HarburguerMenu from './HamburguerMenu.js';
+import Filters from './Filters.js';
+import VideosFeed from './VideosFeed.js';
 
 function App() {
+
+  
   return (
     <>
 
-      <body>
-        <nav class = 'navbar'>
+        <NavBar/>
 
-          <div class = 'toggle-btn'>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <HarburguerMenu/>
 
-          <img src = "./logo.png" class = "logo" alt = "youtube logo"/>
+        <Filters/>
 
-          <div class = "search-box">
-            <input type = "text" class = "search-bar" placeholder = "Pesquisar"/>
-            <button class = "search-btn"><img src = "./search.png" alt = "botao pesquisar"/></button>
-          </div>
+        <VideosFeed/>
 
-        </nav>
-      </body>
+        
     </>
+
   );
+
+  
+
 }
+
 
 export default App;
